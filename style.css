@@ -1,0 +1,234 @@
+:root{
+    --bg:#FF3CAC;
+    --gradient: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    --shadow: 2px 0 10px rgba(0,0,0,.3);
+    --corners: 55px;
+    --text-color: rgb(255, 255, 255);
+    --dark: #537895;
+    --light: #537895;
+    --gradient-dark: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+body{
+    background-color: var(--bg);
+    background-image: var(--gradient);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.797);
+    border: none;
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+    padding: 1em;
+}
+
+button:hover{
+    background-color: var(--text-color);
+}
+
+header {
+    margin: 3em 0;
+}
+
+.logo {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 42pt;
+    font-weight: 500;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 500;
+}
+
+img{
+    max-width: 100%;
+}
+
+form {
+    margin: 0;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16pt;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.pump {
+    height: 130px;
+    width: 180px;
+    position: relative;
+    margin-top: 80px;
+    align-self: flex-end;
+}
+
+
+.handle {
+    height: 10px;
+    width: 80px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: -80;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    transition: all .1s linear;
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.pump:active .handle {
+    top: -20px;
+}
+
+.handle::before {
+    content: " ";
+    background-color: var(--text-color);
+    width: 10px;
+    height: 80px;
+    display: block;
+}
+
+.pump-box {
+    background-color: rgb(26, 26, 26);
+    height: 130px;
+    width: 180px;
+    box-shadow: var(--shadow);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.pump-box span{
+    padding: 20px;
+}
+
+.balloon {
+    background-color: red;
+    border-radius: 50%;
+    transition: all .2s ease;
+    animation: balloon-float 5s ease-in-out infinite;
+    align-self: flex-end;
+    margin: 0 auto;
+    box-shadow: inset -10px -10px 12px rgba(0, 0, 0, 0.303);
+    background: linear-gradient(90deg, rgba(250,69,12,1) 0%, rgba(255,46,1,1) 38%, rgba(222,43,5,1) 65%, rgba(181,34,2,1) 100%);
+    height: 140px;
+    width: 100px;
+}
+
+.balloon.purple{
+    filter: hue-rotate(280deg);
+}
+
+.balloon.blue{
+    filter: hue-rotate(225deg);
+}
+
+.balloon.aqua{
+    filter: hue-rotate(180deg);
+}
+
+@keyframes balloon-float {
+    0%,100% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-0px) rotate(-5deg);
+    }
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+@media screen and (max-width: 700px){
+    .container {
+        width: 90%;
+    }
+}
+
+.game-container {
+    height: 300px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.064);
+    padding: 2.5em;
+    box-shadow: var(--shadow);
+    border-radius: var(--corners);
+}
+
+:hover.card{
+    background-color: rgba(255, 255, 255, 0.18);
+    transition: all .35s ease;
+}
+
+.shadow{
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1em;
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.d-flex.space-between {
+    justify-content: space-between;
+}
+
+.d-flex.space-around {
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: .5em;
+}
+
+.mt-2 {
+    margin-top: 1em;
+}
+
+.mt-3 {
+    margin-top: 1.5em;
+}
+.mb-1 {
+    margin-bottom: .5em;
+}
+
+.mb-2 {
+    margin-bottom: 1em;
+}
+
+.mb-3 {
+    margin-bottom: 1.5em;
+}
